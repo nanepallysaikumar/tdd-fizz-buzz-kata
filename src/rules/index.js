@@ -1,5 +1,6 @@
 import { fizzRule } from "./fizzRule";
+import { buzzRule } from "./buzzRule";
 
-const rules = [fizzRule];
+const rules = [fizzRule, buzzRule];
 
 export { rules };
