@@ -20,3 +20,8 @@ test("it should render text Buzz on fifth position as it is multiple of 5", () =
   render(<App />);
   expect(screen.getByTestId("text-5").textContent).toEqual("Buzz");
 });
+
+test("it should render text FizzBuzz on fiteenth position as it is multiple of 3 and 5", () => {
+  render(<App />);
+  expect(screen.getByTestId("text-15").textContent).toEqual("FizzBuzz");
+});
