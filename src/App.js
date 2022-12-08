@@ -1,9 +1,15 @@
+import { generateNumberListByMaxCount } from "./utility/generateNumberList";
+import { getReplacementTextByNumber } from "./validator/fizzBuzzRuleValidator";
+import { ParaGraph } from "./components/ParaGraph";
+
+const DEFAULT_MAX_COUNT = 100;
+
 function App() {
   return (
     <div className="App">
-      <p data-testid="text-1">1</p>
-      <p data-testid="text-2">2</p>
-      <p data-testid="text-3">Fizz</p>
+      {generateNumberListByMaxCount(DEFAULT_MAX_COUNT).map((item, index) => (
+        <ParaGraph item={getReplacementTextByNumber(item)} index={index} />
+      ))}
     </div>
   );
 }
