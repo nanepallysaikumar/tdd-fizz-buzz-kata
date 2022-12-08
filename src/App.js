@@ -8,7 +8,11 @@ function App() {
   return (
     <div className="App">
       {generateNumberListByMaxCount(DEFAULT_MAX_COUNT).map((item, index) => (
-        <ParaGraph item={getReplacementTextByNumber(item)} index={index} />
+        <ParaGraph
+          key={index}
+          item={getReplacementTextByNumber(item)}
+          index={index}
+        />
       ))}
     </div>
   );
